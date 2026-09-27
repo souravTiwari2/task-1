@@ -1,0 +1,256 @@
+@font-face {
+    font-family: lum;
+    src: url(./Montserrat-Italic-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    height: 100%;
+    width: 100%;
+   
+}
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #fcf9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    font-family: lum;
+    font-size: 30px;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+nav .menu a {
+    color: rgb(63, 61, 61);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    transition: 1s;
+}
+
+nav .menu a {
+    position: relative;
+}
+
+nav .menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #371af4c4;
+    transition: width 0.4s ease;
+}
+
+nav .menu a:hover::after {
+    width: 100%;
+}
+.shopingcart{
+    width: 50px;
+    height: 50px;
+    background : url("data:image/png;base64,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");
+    background-size: cover;
+    margin-right: 20px;
+}
+  
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    padding: 20%, 40%;
+    
+
+
+}
+.hero #newcollection{
+    margin: 5%;
+    font-size: 1rem;
+
+}
+.hero #h1 h1{
+    margin: 8%;
+    font-size: 3rem;
+    font-display: optional;
+}
+.hero br{
+    color: rgb(30, 65, 40);
+}
+.hero #paragraph{
+    width: 100%;
+    height: 100%;
+    font-size: 5%;
+    word-spacing: 20px;
+}
+.hero .colors {
+    width: 100%;
+    height: 100%;
+    margin: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60%;
+    
+}
+.hero .colors h3{
+    
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+.hero .colors{
+    width: 100%;
+    height: 100%;
+    padding: 30% , 30%;
+    margin-bottom: 50%;
+    margin-bottom: 400%;
+    gap: 50px;
+}
+.hero .colors .box{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: -10%;
+    size: 20mm;
+    
+}
+.hero .colors .smallcircle1{
+    width: 40px;
+    height: 40px;
+    
+    background-color: #0d2813;
+    border-radius: 100%;
+}
+
+.hero .colors .smallcircle2{
+    width: 40px;
+    height: 40px;
+    
+    background-color: #b8afb9;
+    border-radius: 100%;
+}
+
+.hero .colors .smallcircle3{
+    width: 40px;
+    height: 40px;
+    
+    background-color: #f6bbef;
+    border-radius: 100%;
+
+}
+.hero .colors .details{
+    width: 50px;
+    height: 50px;
+    margin-right: 30% ;
+}
+.hero .colors .details p{
+    height: 50px;
+    width: 30px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 570px;
+ 
+}
+
+.image img{
+    
+    height: 70%;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.image img ::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4c457ac4;
+    transition: width 0.4s ease;
+}
+.image img ::after{
+    height: 100%;
+    width: 100%;
+}
+
+.image .ratting{
+    
+padding-top: 20px;
+    z-index: 2;
+    width: 120px;
+    height: 50px;
+    padding: 14px , 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    position: absolute;
+    background: rgb(246, 246, 246);
+    padding-left: 22px;
+    margin: 20px;
+
+
+}
+
+.price{
+    z-index: 2;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(246, 246, 246);
+    left: 50%;
+    top: 7%;
+    border-radius: 40px;
+    padding: 15px ;
+    padding-left: 30px;
+
+}
+
+.buybag{
+    z-index: 3;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color:rgb(97, 95, 95);
+    padding: 50px , 40px;
+    padding-left: 19px;
+
+
+    left: 50%;
+    bottom: 200px;
+    border-radius: 100px;
+    font-size: x-large;
+    
+}
+
